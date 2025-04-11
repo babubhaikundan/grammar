@@ -26,8 +26,8 @@
         .search-bar { margin: 20px auto; width: 80%; max-width: 600px; }
         .search-bar input { width: 100%; padding: 10px; border: 2px solid #007bff; border-radius: 5px; font-size: 16px; }
         .no-results { color: red; font-weight: bold; margin-top: 20px; display: none; }
-        #video-player { display: none; margin: 20px auto; width: 80%; max-width: 800px; }
-        #youtube-player { display: none; margin: 20px auto; width: 80%; max-width: 800px; }
+        #video-player { display: none; margin: 20px auto; width: 90%; max-width: 900px; }
+        #youtube-player { display: none; margin: 20px auto; width: 90%; max-width: 900px; }
         .download-button { margin-top: 10px; text-align: center; }
         .download-button a { background: #007bff; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold; }
         .download-button a:hover { background: #0056b3; }
@@ -36,7 +36,8 @@
 </head>
 <body>
     <div class="header">Complete English Grammar  Recorded Batch  Grammar</div>
-    <div class="subheading">📥 𝐄𝐱𝐭𝐫𝐚𝐜𝐭𝐞𝐝 𝐁𝐲 : 𝕂𝕦𝕟𝕕𝕒𝕟 𝕐𝕒𝕕𝕒𝕧 😎</a></div><br>
+    <div class="subheading">📥𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐝 𝐁𝐲 : 𝕂𝕦𝕟𝕕𝕒𝕟 𝕐𝕒𝕕𝕒𝕧 😎 <a href="https://instagram.com/babubhaikundan"><img src="image.jpg" width="50" height="50">
+ </a></div><br>
     <div class="datetime" id="datetime">📅 Friday 14 March, 2025 | ⏰ 07:19:40 AM</div><br>
     <p>🔹𝐂𝐨𝐧𝐭𝐞𝐜𝐭 𝐢𝐝- : <a href="https://t.me/Kundan_Yadav_bot" target="_blank"> 𝕂𝕦𝕟𝕕𝕒𝕟 𝕐𝕒𝕕𝕒𝕧 😎 </a></p>
     <div class="search-bar">
@@ -56,9 +57,7 @@
         <div style="text-align: center; margin-top: 10px; font-weight: bold; color: #007bff;">𝕂𝕦𝕟𝕕𝕒𝕟 𝕐𝕒𝕕𝕒𝕧 😎</div>
     </div>
     <div id="youtube-player">
-        <div id="player"></div>
-        <div style="text-align: center; margin-top: 10px; font-weight: bold; color: #007bff;">Blackbook</div>
-    </div>
+        
     <div class="container">
         <div class="tab" onclick="showContent('videos')">Videos</div>
         <div class="tab" onclick="showContent('pdfs')">PDFs</div>
@@ -84,6 +83,8 @@
     </div>
     <div class="footer">Extracted By - <a href="https://t.me/Kundan_Yadav_bot" target="_blank">𝕂𝕦𝕟𝕕𝕒𝕟 𝕐𝕒𝕕𝕒𝕧 😎</a></div>
     <script src="https://vjs.zencdn.net/8.10.0/video.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/videojs-hls-quality-selector@latest/dist/videojs-hls-quality-selector.min.js"></script>
+
     <script src="https://www.youtube.com/iframe_api"></script>
     <script>
         const player = videojs('Blackbook', {
@@ -91,6 +92,10 @@
             autoplay: false,
             preload: 'auto',
             fluid: true,
+            playbackRates: [0.5, 1, 1.5,1.7,2,2.5,4],
+            plugins: {
+             hlsQualitySelector: {
+            displayCurrentQuality: true,}}
         });
         let youtubePlayer;
         function onYouTubeIframeAPIReady() {
